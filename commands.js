@@ -60,7 +60,7 @@ function createCommandChoices() {
 
 // Simple test command
 export const TEST_COMMAND = {
-  name: 'test',
+  name: 'testBlkBot',
   description: 'Basic guild command',
   type: 1,
 };
@@ -91,7 +91,7 @@ export const GET_USERS_WITH_ROLE = {
       name: 'roleId',
       description: 'Role ID of the role to query',
       required: true
-    }
+    },
   ],
   type: 1
 }

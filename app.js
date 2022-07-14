@@ -177,6 +177,5 @@ app.listen(PORT, () => {
   HasGuildCommands(process.env.APP_ID, process.env.GUILD_ID, [
     TEST_COMMAND,
     CHALLENGE_COMMAND,
-    GET_USERS_WITH_ROLE
   ]);
 });
