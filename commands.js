@@ -80,3 +80,18 @@ export const CHALLENGE_COMMAND = {
   ],
   type: 1,
 };
+
+//Command that gets users in a role
+export const GET_USERS_WITH_ROLE = {
+  name: 'getUsersWithRole',
+  description: 'Get a list of users that have the given role',
+  options: [
+    {
+      type: 3,
+      name: 'roleId',
+      description: 'Role ID of the role to query',
+      required: true
+    }
+  ],
+  type: 1
+}
