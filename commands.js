@@ -60,7 +60,7 @@ function createCommandChoices() {
 
 // Simple test command
 export const TEST_COMMAND = {
-  name: 'testBlkBot',
+  name: 'test-blk-bot',
   description: 'Basic guild command',
   type: 1,
 };
@@ -82,16 +82,16 @@ export const CHALLENGE_COMMAND = {
 };
 
 //Command that gets users in a role
-export const GET_USERS_WITH_ROLE = {
-  name: 'getUsersWithRole',
+export const LIST_ROLE = {
+  name: 'list-role',
   description: 'Get a list of users that have the given role',
   options: [
     {
       type: 3,
-      name: 'roleId',
+      name: 'role-id',
       description: 'Role ID of the role to query',
       required: true
     },
   ],
   type: 1
-}
+};

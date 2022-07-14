@@ -11,7 +11,7 @@ import { getShuffledOptions, getResult } from './game.js';
 import {
   CHALLENGE_COMMAND,
   TEST_COMMAND,
-  GET_USERS_WITH_ROLE,
+  LIST_ROLE,
   HasGuildCommands,
 } from './commands.js';
 
@@ -47,7 +47,7 @@ app.post('/interactions', async function (req, res) {
     const { name } = data;
 
     // "test" guild command
-    if (name === 'test') {
+    if (name === 'test-blk-bot') {
       // Send a message into the channel where command was triggered from
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
@@ -177,5 +177,6 @@ app.listen(PORT, () => {
   HasGuildCommands(process.env.APP_ID, process.env.GUILD_ID, [
     TEST_COMMAND,
     CHALLENGE_COMMAND,
+    LIST_ROLE,
   ]);
 });
