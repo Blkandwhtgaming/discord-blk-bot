@@ -4,7 +4,7 @@ import {
   InteractionResponseType,
   MessageComponentTypes,
 } from 'discord-interactions';
-import { VerifyDiscordRequest } from '../utils.js';
+import { VerifyDiscordRequest } from '../utility/utils.js';
 
 // Create and configure express app
 const app = express();
