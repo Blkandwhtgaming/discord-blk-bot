@@ -6,14 +6,14 @@ import {
   MessageComponentTypes,
   ButtonStyleTypes,
 } from 'discord-interactions';
-import { VerifyDiscordRequest, getRandomEmoji, DiscordRequest } from './utils.js';
-import { getShuffledOptions, getResult } from './game.js';
+import { VerifyDiscordRequest, getRandomEmoji, DiscordRequest } from './utility/utils.js';
+import { getShuffledOptions, getResult } from './services/game.js';
 import {
   CHALLENGE_COMMAND,
   TEST_COMMAND,
   LIST_ROLE,
   HasGuildCommands,
-} from './commands.js';
+} from './constants/discord/commands.js';
 
 // Create an express app
 const app = express();
