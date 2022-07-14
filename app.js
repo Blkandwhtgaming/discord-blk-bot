@@ -91,6 +91,33 @@ app.post('/interactions', async function (req, res) {
         },
         });
     }
+    if(name === 'list-role'){
+      //TODO: Not done yet
+      // User's Role ID passed in
+      const roleId = req.body.data.options[0].value;
+      console.log("Role ID: ".concat(id));
+      return res.send({
+        type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+        data: {
+            // Fetches a random emoji to send from a helper function
+            content: `List of users in role: <@${roleId}>`,
+            components: [
+            {
+                type: MessageComponentTypes.ACTION_ROW,
+                components: [
+                {
+                    type: MessageComponentTypes.BUTTON,
+                    // Append the game ID to use later on
+                    custom_id: `accept_button_${req.body.id}`,
+                    label: 'Accept',
+                    style: ButtonStyleTypes.PRIMARY,
+                },
+                ],
+            },
+            ],
+        },
+        });
+    }
   }
   if (type === InteractionType.MESSAGE_COMPONENT) {
     // custom_id set in payload when sending message component
