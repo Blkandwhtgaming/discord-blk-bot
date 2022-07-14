@@ -99,8 +99,8 @@ app.post('/interactions', async function (req, res) {
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
-            // Fetches a random emoji to send from a helper function
-            content: `List of users in role: <@${roleId}>`,
+            // Role format is <@&roleId>
+            content: `List of users in role: <@&${roleId}>`,
             components: [
             {
                 type: MessageComponentTypes.ACTION_ROW,
